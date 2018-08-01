@@ -1,0 +1,32 @@
+<!doctype html>
+<!--[if IE]>
+<html class="no-js ie-notify" {{ HTML_ATTRS }}>
+<![endif]-->
+<!--[if !IE]> <-->
+<html class="no-js" {{ HTML_ATTRS }}>
+<!--<![endif]-->
+  <head>
+    {{ HEAD }}
+    <script>
+      (function() {
+        var docElement = document.documentElement;
+        var classRE = new RegExp('(^|\\s)no-js(\\s|$)');
+        var className = docElement.className;
+        docElement.className = className.replace(classRE, '$1js$2');
+      })();
+    </script>
+  </head>
+  <body {{ BODY_ATTRS }}>
+    <!--<ul id="screen-readers-skip-navigation" class="accessible-elem">-->
+      <!--<li><a href="#navigation">Aller au menu</a></li>-->
+      <!--<li><a href="#content">Aller au contenu</a></li>-->
+      <!--<li><a href="#informations">Aller au pied de page</a></li>-->
+    <!--</ul>-->
+    {{ APP }}
+    <noscript>
+      <p>Afin d'améliorer votre expérience sur Délectable nous vous recommandons d'activer Javascript <br />
+        <a href="https://www.enable-javascript.com/fr/" target="_blank" rel="noopener">Comment activer Javascript sur mon appareil ?</a>
+      </p>
+    </noscript>
+  </body>
+</html>
